@@ -1,0 +1,173 @@
+//Peticiones para Clientes
+
+//Crear cliente
+###
+POST http://localhost:4000/api/clientes HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Ana María Rico",
+    "email": "anaco@gmail.com",
+    "fechaCreacion": "2021-10-03",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Obtener todos los clientes
+GET http://localhost:4000/api/clientes HTTP/1.1
+Content-Type: application/json
+
+###
+//Obtener un cliente especifico
+GET http://localhost:4000/api/clientes/65457fb785611210740888ce HTTP/1.1
+Content-Type: application/json
+
+###
+//Actualizar un cliente
+PUT http://localhost:4000/api/clientes/6545a9b885611210740888d0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Ana María Rico",
+    "email": "anarico@gmail.com",
+    "fechaCreacion": "2021-10-03",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Eliminar un cliente
+DELETE http://localhost:4000/api/clientes/65457fb785611210740888ce HTTP/1.1
+Content-Type: application/json
+
+
+//Peticiones para Tipos de Proyectos
+
+###
+//Crear tipo de proyecto
+POST http://localhost:4000/api/tipoProyecto HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Trabajo Final Especialización",
+    "fechaCreacion": "2023-11-04",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Obtener todos los tipos de proyectos
+GET http://localhost:4000/api/tipoProyecto HTTP/1.1
+Content-Type: application/json
+
+###
+//Obtener un tipo de proyecto en específico
+GET http://localhost:4000/api/tipoProyecto/65462ab7ab31fadfa2af3dbc HTTP/1.1
+Content-Type: application/json
+
+###
+//Actualizar un tipo de proyecto
+PUT http://localhost:4000/api/tipoProyecto/65462adcab31fadfa2af3dc0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Trabajo Final de Especialización",
+    "fechaCreacion": "2023-11-04",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Eliminar un tipo de proyecto
+DELETE http://localhost:4000/api/tipoProyecto/65462adcab31fadfa2af3dc0 HTTP/1.1
+Content-Type: application/json
+
+
+//Peticiones para Universidades
+
+###
+//Crear una universidad
+
+POST http://localhost:4000/api/universidades HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Universidad Colombo Alemana",
+    "direccion": "Cra 15 # 127 - 42",
+    "telefono": "6017458563",
+    "fechaCreacion": "2021-10-03",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Obtener todas las universidades
+GET http://localhost:4000/api/universidades HTTP/1.1
+Content-Type: application/json
+
+###
+//Obtener una universidad en específico
+GET http://localhost:4000/api/universidades/65463024bb9f91a3b346cc1d HTTP/1.1
+Content-Type: application/json
+
+###
+//Actualizar una universidad
+PUT http://localhost:4000/api/universidades/65463024bb9f91a3b346cc1d HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Universidad Colombo Italiana",
+    "direccion": "Cra 15 # 127 - 42",
+    "telefono": "6017458563",
+    "fechaCreacion": "2021-10-03",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Eliminar una universidad
+DELETE http://localhost:4000/api/universidades/65463024bb9f91a3b346cc1d HTTP/1.1
+Content-Type: application/json
+
+//Peticiones para Etapas
+
+###
+//Crear una etapa
+
+POST http://localhost:4000/api/etapas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Entrega prueba",
+    "fechaCreacion": "2021-10-03",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Obtener todas las etapas
+GET http://localhost:4000/api/etapas HTTP/1.1
+Content-Type: application/json
+
+###
+//Obtener una etapa en específico
+GET http://localhost:4000/api/etapas/65464170d924c3b2c8cabb26 HTTP/1.1
+Content-Type: application/json
+
+###
+//Actualizar una etapa
+PUT http://localhost:4000/api/etapas/6546433c3b4b755e28911d1e HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Universidad Colombo Italiana",
+    "fechaCreacion": "2021-10-03",
+    "fechaActualizacion": "2023-10-08"
+
+}
+
+###
+//Eliminar una etapa
+DELETE http://localhost:4000/api/etapas/6546433c3b4b755e28911d1e HTTP/1.1
+Content-Type: application/json

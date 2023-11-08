@@ -1,0 +1,48 @@
+
+//Peticiones para Proyectos
+
+###
+//Crear un proyecto
+
+POST http://localhost:8000/api/proyecto HTTP/1.1
+Content-Type: application/json
+
+{
+    "numero": 25456,
+    "titulo": "Arquitectura de software",
+    "fechaIniciacion": "2023-07-08",
+    "fechaEntrega": "2023-12-20",
+    "valor": 550000,
+    "fechaCreacion": "2023-06-08",
+    "fechaActualizacion": "2023-10-08",
+    "cliente": "6545a9b885611210740888d0",
+    "tipoProyecto": "65462ad6ab31fadfa2af3dbe",
+    "universidad": "65462f98bb9f91a3b346cc1a",
+    "etapa": "654643313b4b755e28911d1b"
+
+}
+
+###
+//Obtener todos los proyectos
+GET http://localhost:8000/api/proyecto HTTP/1.1
+Content-Type: application/json
+
+###
+//Obtener un proyecto en específico
+GET http://localhost:8000/api/proyecto/65471a582fd83ea97759d3d8 HTTP/1.1
+Content-Type: application/json
+
+###
+//Actualizar un proyecto
+PUT http://localhost:8000/api/proyecto/65466d978bc3b404547e5e0b HTTP/1.1
+Content-Type: application/json
+
+{
+    "valor": 800000
+
+}
+
+###
+//Eliminar un proyecto
+DELETE http://localhost:8000/api/proyecto/65466d978bc3b404547e5e0b HTTP/1.1
+Content-Type: application/json

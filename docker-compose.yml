@@ -1,0 +1,29 @@
+version: '3'
+services:
+  aplicacion_principal:
+    build:
+      context: ./API_Monolitica
+    ports:
+      - "4000:4000"
+    environment:
+      - MONGODB_URI=mongodb+srv://rafael_Lopez:1024567454@cluster0.dv1azai.mongodb.net/?retryWrites=true&w=majority
+    depends_on:
+      - aplicacion_principal_db
+  
+
+  aplicacion_principal_db:
+    image: mongo
+    container_name: aplicacion_principal_db
+    ports:
+      - "27017:27017"
+
+  modulo_proyectos:
+    build:
+      context: ./API_ModuloProyectos
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URI=mongodb+srv://rafael_Lopez:1024567454@cluster0.dv1azai.mongodb.net/?retryWrites=true&w=majority
+    depends_on:
+      - aplicacion_principal
+
