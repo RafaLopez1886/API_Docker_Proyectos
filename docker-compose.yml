@@ -9,7 +9,6 @@ services:
       - MONGODB_URI=mongodb+srv://rafael_Lopez:1024567454@cluster0.dv1azai.mongodb.net/?retryWrites=true&w=majority
     depends_on:
       - aplicacion_principal_db
-  
 
   aplicacion_principal_db:
     image: mongo
@@ -20,10 +19,21 @@ services:
   modulo_proyectos:
     build:
       context: ./API_ModuloProyectos
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"  # Exponer el puerto 8000
     environment:
       - MONGODB_URI=mongodb+srv://rafael_Lopez:1024567454@cluster0.dv1azai.mongodb.net/?retryWrites=true&w=majority
     depends_on:
       - aplicacion_principal
+
+  nginx:
+    image: nginx
+    container_name: nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - modulo_proyectos
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
 

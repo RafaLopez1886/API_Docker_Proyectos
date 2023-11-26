@@ -4,7 +4,7 @@
 ###
 //Crear un proyecto
 
-POST http://localhost:8000/api/proyecto HTTP/1.1
+POST http://localhost:8080/api/proyecto HTTP/1.1
 Content-Type: application/json
 
 {
@@ -24,17 +24,17 @@ Content-Type: application/json
 
 ###
 //Obtener todos los proyectos
-GET http://localhost:8000/api/proyecto HTTP/1.1
+GET http://localhost:8080/api/proyecto HTTP/1.1
 Content-Type: application/json
 
 ###
 //Obtener un proyecto en específico
-GET http://localhost:8000/api/proyecto/65471a582fd83ea97759d3d8 HTTP/1.1
+GET http://localhost:8080/api/proyecto/65471a582fd83ea97759d3d8 HTTP/1.1
 Content-Type: application/json
 
 ###
 //Actualizar un proyecto
-PUT http://localhost:8000/api/proyecto/65466d978bc3b404547e5e0b HTTP/1.1
+PUT http://localhost:8080/api/proyecto/65466d978bc3b404547e5e0b HTTP/1.1
 Content-Type: application/json
 
 {
@@ -44,5 +44,5 @@ Content-Type: application/json
 
 ###
 //Eliminar un proyecto
-DELETE http://localhost:8000/api/proyecto/65466d978bc3b404547e5e0b HTTP/1.1
+DELETE http://localhost:8080/api/proyecto/65466d978bc3b404547e5e0b HTTP/1.1
 Content-Type: application/json
